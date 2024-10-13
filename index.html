@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./styles.css">
+        <script src="./Babi.js"></script>
+    </head>
+    <body>
+        <div id="splash" onclick="start()">Happy 200 days&hearts; Click it!</div>
+        <audio id="bgm" src="./stand.mp3" loop></audio>
+        <div class="container">
+            <div>
+                <h1 class = "header_text">Do you think your boyfriend is attactive? </h1>
+                <h1 class = "header_text">Try to press no for fun, because you won't be able to</h1>
+            </div>
+            <div class="gif_container">
+                <img src=https://www.icegif.com/wp-content/uploads/2023/01/icegif-1310.gif>
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">YES</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onClick="moveButton()">NO</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";  
+                    }
+
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
